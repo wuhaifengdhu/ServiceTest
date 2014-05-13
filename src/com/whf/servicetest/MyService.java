@@ -36,7 +36,7 @@ public class MyService extends Service {
 		// TODO Auto-generated method stub
 		Log.i(TAG,"onStartCommand");
 		MailStore myMail=new  MailStore();
-		myMail.sendEmail("mail Test");
+		myMail.sendEmail("mail Test 可以了不 ");
 		return super.onStartCommand(intent, flags, startId);
 	}
 
