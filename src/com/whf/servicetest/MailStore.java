@@ -34,12 +34,20 @@ public class MailStore {
 		{
 			//配置发送及接收邮箱
 			InternetAddress fromAddress, toAddress;
+<<<<<<< HEAD
 			fromAddress = new InternetAddress("wuhaifeng20110317@163.com", "myMailFrom");
+=======
+			fromAddress = new InternetAddress("wuhaifengdhu@163.com", "my163");
+>>>>>>> 2ac623bb480d364ca007fa99da4e331011bef044
 			toAddress	= new InternetAddress("wuhaifeng20110317@163.com", "myMailTo");
 			
 			//配置发送信息
 			MimeMessage message = new MimeMessage(session);
 			message.setContent(emailString, "text/plain; charset=utf-8");
+<<<<<<< HEAD
+=======
+		    System.out.println("emailString:"+emailString);
+>>>>>>> 2ac623bb480d364ca007fa99da4e331011bef044
 			message.setSubject("email test");
 			message.setFrom(fromAddress);
 			message.addRecipient(Message.RecipientType.TO, toAddress);
@@ -67,13 +75,14 @@ public class MailStore {
 		}
 		return false;
 	}
+
 	
 	class PassAuthenticator extends Authenticator  
 	{
 		public PasswordAuthentication getPasswordAuthentication()
 		{
-			String username = "wuhaifeng20110317@163.com";
-			String pwd = "whf257";
+			String username = "wuhaifengdhu@163.com";
+			String pwd = "wuya910615";
 			return new PasswordAuthentication(username, pwd);
 		}
 	}

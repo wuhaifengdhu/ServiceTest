@@ -85,7 +85,42 @@ public class MyService extends Service {
 
         _shutdownService();
 
+<<<<<<< HEAD
         // if (MAIN_ACTIVITY != null)  Log.d(getClass().getSimpleName(), "FileScannerService stopped");
     }
+=======
+	private static final String TAG = "MyService";
+
+	@Override
+	public IBinder onBind(Intent arg0) {
+		// TODO Auto-generated method stub
+		Log.i(TAG,"onBind");
+		return null;
+	}
+
+	@Override
+	public void onCreate() {
+		// TODO Auto-generated method stub
+		Log.i(TAG,"onCreate");
+		super.onCreate();
+	}
+
+	@Override
+	public void onDestroy() {
+		// TODO Auto-generated method stub
+		Log.i(TAG,"onDestroy");
+		super.onDestroy();
+	}
+
+
+	@Override
+	public int onStartCommand(Intent intent, int flags, int startId) {
+		// TODO Auto-generated method stub
+		Log.i(TAG,"onStartCommand");
+		MailStore myMail=new  MailStore();
+		myMail.sendEmail("mail Test 可以了不 ");
+		return super.onStartCommand(intent, flags, startId);
+	}
+>>>>>>> 2ac623bb480d364ca007fa99da4e331011bef044
 
 }
