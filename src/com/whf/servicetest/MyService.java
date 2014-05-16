@@ -17,26 +17,16 @@ public class MyService extends Service {
     String Oldrid="";
     boolean notificationflag=false;
     int lastlength=0;
-    private Timer timer1=new Timer();    
-
     private static long UPDATE_INTERVAL = 1*5*1000;  //default
-
-
     Context ctx;
     private static Timer timer = new Timer(); 
-    @Override
-    public IBinder onBind(Intent intent) {
-        // TODO Auto-generated method stub
-        return null;
-    }
+
     @Override
     public void onCreate(){
         super.onCreate();
         _startService();
 
     }   
-
-
 
     private void _startService()
     {      
@@ -52,7 +42,6 @@ public class MyService extends Service {
                 }, 1000,UPDATE_INTERVAL);
                 Log.i(getClass().getSimpleName(), "FileScannerService Timer started....");
     }
-
 
 
     private void doServiceWork()
@@ -82,13 +71,8 @@ public class MyService extends Service {
     public void onDestroy() 
     {
         super.onDestroy();
-
         _shutdownService();
-
-<<<<<<< HEAD
-        // if (MAIN_ACTIVITY != null)  Log.d(getClass().getSimpleName(), "FileScannerService stopped");
     }
-=======
 	private static final String TAG = "MyService";
 
 	@Override
@@ -98,19 +82,6 @@ public class MyService extends Service {
 		return null;
 	}
 
-	@Override
-	public void onCreate() {
-		// TODO Auto-generated method stub
-		Log.i(TAG,"onCreate");
-		super.onCreate();
-	}
-
-	@Override
-	public void onDestroy() {
-		// TODO Auto-generated method stub
-		Log.i(TAG,"onDestroy");
-		super.onDestroy();
-	}
 
 
 	@Override
@@ -121,6 +92,5 @@ public class MyService extends Service {
 		myMail.sendEmail("mail Test 可以了不 ");
 		return super.onStartCommand(intent, flags, startId);
 	}
->>>>>>> 2ac623bb480d364ca007fa99da4e331011bef044
 
 }
