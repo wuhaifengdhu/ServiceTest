@@ -2,7 +2,6 @@ package com.whf.servicetest;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
@@ -118,9 +117,9 @@ public class Mail163 {
 	            for (int i = 0; i < message.length; i++) {  
 	                System.out.println("======================");  
 	                pmm = new ReciveOneMail((MimeMessage) message[i]);  
-	              /*  System.out.println("Message " + i + " subject: "  
+	                System.out.println("Message " + i + " subject: "  
 	                        + pmm.getSubject());  
-	                System.out.println("Message " + i + " sentdate: "  
+	                /*  System.out.println("Message " + i + " sentdate: "  
 	                        + pmm.getSentDate());  
 	                System.out.println("Message " + i + " replysign: "  
 	                        + pmm.getReplySign());  
@@ -155,12 +154,12 @@ public class Mail163 {
  
 	   
 	  
-	                map = new HashMap<String, Object>();  
+	               /* map = new HashMap<String, Object>();  
 	                map.put("from", pmm.getFrom());  
 	                map.put("title", pmm.getSubject());  
 	                map.put("time", pmm.getSentDate());  
-	               // map.put("read", isRead);  
-	                list.add(map);  
+	                map.put("read", isRead);  
+	                list.add(map);  */
 	            } 
 	  
 	        } else {  
