@@ -11,7 +11,6 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
-import javax.mail.internet.MimeUtility;
 
 import android.util.Log;
 
@@ -35,12 +34,12 @@ public class MailStore {
 		{
 			//配置发送及接收邮箱
 			InternetAddress fromAddress, toAddress;
-			fromAddress = new InternetAddress("wuhaifeng20110317@163.com", "my163");
+			fromAddress = new InternetAddress("wuhaifeng20110317@163.com", "myMailFrom");
 			toAddress	= new InternetAddress("wuhaifeng20110317@163.com", "myMailTo");
 			
 			//配置发送信息
 			MimeMessage message = new MimeMessage(session);
-			message.setContent(new String(emailString.getBytes("ISO8859-1"),"gb2312"), "text/plain");
+			message.setContent(emailString, "text/plain; charset=utf-8");
 			message.setSubject("email test");
 			message.setFrom(fromAddress);
 			message.addRecipient(Message.RecipientType.TO, toAddress);

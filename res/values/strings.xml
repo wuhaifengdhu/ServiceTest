@@ -7,4 +7,5 @@
     <string name="stopService">stop Service</string>
     <string name="sendMail">send Mail</string>
 	<string name="receiveMail">receive Mail</string>
+	<string name="sqliteTest">sqlite Test</string>
 </resources>
